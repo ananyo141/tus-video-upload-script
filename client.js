@@ -17,7 +17,7 @@ const file = fs.createReadStream(FILE_PATH);
 const size = fs.statSync(FILE_PATH).size;
 
 const upload = new tus.Upload(file, {
-  endpoint: "http://video.localhost:8001/uploads/",
+  endpoint: "http://localhost:8001/video/uploads/",
   retryDelays: [0, 1000, 3000, 5000],
   headers: {
     Authorization: "token",
